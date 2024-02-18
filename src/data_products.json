@@ -1,0 +1,84 @@
+{
+	"products": [
+		{
+			"id": "1",
+			"name": "Running Shoes",
+			"image": "running_shoes.jpg",
+			"price": "59.99",
+			"stock": 10,
+			"popularity": 5
+		},
+		{
+			"id": "2",
+			"name": "Sneakers",
+			"image": "sneakers.jpg",
+			"price": "49.99",
+			"stock": 0,
+			"popularity": 3
+		},
+		{
+			"id": "3",
+			"name": "High Heels",
+			"image": "high_heels.jpg",
+			"price": "79.99",
+			"stock": 10,
+			"popularity": 5
+		},
+		{
+			"id": "4",
+			"name": "Boots",
+			"image": "boots.jpg",
+			"price": "89.99",
+			"stock": 10,
+			"popularity": 2
+		},
+		{
+			"id": "5",
+			"name": "Sandals",
+			"image": "sandals.jpg",
+			"price": "39.99",
+			"stock": 10,
+			"popularity": 2
+		},
+		{
+			"id": "6",
+			"name": "Flip Flops",
+			"image": "flip_flops.jpg",
+			"price": "19.99",
+			"stock": 30,
+			"popularity": 4
+		},
+		{
+			"id": "7",
+			"name": "Loafers",
+			"image": "loafers.jpg",
+			"price": "69.99",
+			"stock": 15,
+			"popularity": 5
+		},
+		{
+			"id": "8",
+			"name": "Oxford Shoes",
+			"image": "oxford_shoes.jpg",
+			"price": "79.99",
+			"stock": 20,
+			"popularity": 5
+		},
+		{
+			"id": "9",
+			"name": "Slippers",
+			"image": "slippers.jpg",
+			"price": "29.99",
+			"stock": 5,
+			"popularity": 1
+		},
+		{
+			"id": "10",
+			"name": "Espadrilles",
+			"image": "espadrilles.jpg",
+			"price": "49.99",
+			"stock": 0,
+			"popularity": 0
+		}
+	]
+}
