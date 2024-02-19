@@ -6,7 +6,6 @@ import dataProducts from '@/data_products.json'
 export const useProductStore = defineStore("products", {
 	state: () => ({
 		allProducts: dataProducts.products,
-		carProducts: [],
 		filters: []
 	}),
 	getters: {
@@ -63,11 +62,6 @@ export const useProductStore = defineStore("products", {
 		},
 		getProductById(id){
 			return this.allProducts.find(p => parseInt(p.id) === id)
-		},
-		addProductToCar(product ,qty){
-			const productSend = product
-			Object.assign(productSend, {qty})
-			this.carProducts.push(productSend)
 		},
 		getManyProductsByPattern(pattern){
 			if(!pattern.length) return []

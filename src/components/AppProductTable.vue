@@ -1,6 +1,6 @@
 <template>
 	<div class="container-table">
-		<button v-for="(product) in products" @click="$emit('select-product', product)">
+		<button v-if="products.length" v-for="(product) in products" @click="$emit('select-product', product)">
 			<AppProductCard :key="product.id" :dataProduct="product" />
 		</button>
 	</div>

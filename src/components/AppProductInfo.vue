@@ -1,7 +1,7 @@
 <template>
 	<div class="card-large">
 		<section class="header">
-			<button @click="router.back()">
+			<button @click="gotoProducts">
 				<svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
 				</svg>
@@ -34,6 +34,7 @@
 import AppButton from './AppButton.vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useProductStore } from '@/stores/product';
+import { useCarStore } from '@/stores/car.js'
 import { ref } from 'vue'
 
 const productQuantity = ref(1)
@@ -41,13 +42,16 @@ const route = useRoute()
 const router = useRouter()
 const productId = parseInt(route.params.productId)
 
-const { getProductById, addProductToCar } = useProductStore()
+const { addProductToCar } = useCarStore()
+const { getProductById } = useProductStore()
 const product = getProductById(productId)
+
+const gotoProducts = () => router.push({name: 'products'})
 
 const onSubmit = () =>{
 	addProductToCar(product, productQuantity.value)
 	productQuantity.value = 0
-	setTimeout(()=> router.back(), 200)
+	setTimeout(()=> gotoProducts(), 100)
 }
 
 

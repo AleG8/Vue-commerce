@@ -24,12 +24,16 @@ const pattern = ref("")
 const onSearch = () =>{
 	let product = getOneProduct(pattern.value)
 	if(product) {
+		pattern.value = ""
 		return router.push({name: 'single.product', params: {productId: product.id}})
 	}
-	alert("No exist that product!")
+	alert("No exists that product!")
 }
 
-const onSelect = (product) => pattern.value = product.name
+const onSelect = (product) => {
+	pattern.value = product.name
+	onSearch()
+}
 
 </script>
 <style scoped>

@@ -5,7 +5,7 @@
 		  :products="$product.filteredProducts"
 		  v-show="!isActiveProduct"
 		  @select-product="productInfo" />
-		<RouterView />
+		<RouterView/>
 	</section>
 </template>
 <script setup>

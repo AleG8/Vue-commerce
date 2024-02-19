@@ -1,7 +1,7 @@
 <template>
   <main>
     <AppNavBar/>
-    <RouterView />
+    <RouterView :key="$route.path"/>
     <AppFooter />
   </main>
 </template>
